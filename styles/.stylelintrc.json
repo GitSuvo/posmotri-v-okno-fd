@@ -1,9 +1,0 @@
-
-{
-    "extends": "stylelint-config-standard",
-    "rules": {
-        "declaration-block-no-redundant-longhand-properties": true,
-        "no-duplicate-selectors": true,
-        "no-empty-source": true
-    }
-}

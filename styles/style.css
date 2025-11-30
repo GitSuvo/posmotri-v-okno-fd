@@ -61,14 +61,9 @@ ol {
   gap: 30px;
 }
 
-.search-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
 
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   text-transform: uppercase;
   line-height: 94%;
@@ -92,6 +87,7 @@ ol {
   height: 100%;
 }
 
+
 .content__details {
   height: 100%;
   width: 100%;
@@ -101,10 +97,11 @@ ol {
   position: relative;
   height: 298px;
   max-width: 100%;
-  overflow-y: scroll;
+  overflow: auto;                     /* - заменил overflow-y */
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-right: 6px;              /* - задал отсутп, так как ширина всей секции должна быть меньше как оказалось, а не только кнопки */
 }
 
 .content__list {
@@ -119,12 +116,8 @@ ol {
   color: #fff;
 }
 
-.content__card-link_current {
-  background-color: #545050;
-}
-
-.content__card-link_current:active {
-  background-color: #545050;
+.content__card-link:active {
+  background-color: #545050;     /* - задал content__card-link:active*/
 }
 
 .content__card-link_current:hover {
@@ -144,6 +137,7 @@ ol {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+  height: 103px;
 }
 
 .content__video-card-description-container {
@@ -151,7 +145,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif; 
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
@@ -173,6 +167,7 @@ ol {
 .content__video-card-thumbnail {
   min-width: 194px;
   max-width: 194px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   flex-shrink: 0;
@@ -188,14 +183,23 @@ ol {
   white-space: nowrap;
 }
 
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .search-form__textfield {
+  font-family: 'Fira Sans Condensed', sans-serif;    /* - задал шрифт для поля ввода */
+  font-size: 18px;
+  line-height: 100%;
   appearance: none;
   border: none;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   color: #fff;
   background: transparent;
-  font-size: 18px;
+  width: 225px;                                     /* - установил ширину для поля ввода */
 }
 
 .search-form__fieldset-title {
@@ -205,13 +209,14 @@ ol {
 }
 
 .search-form__textfield::placeholder {
+  font-family: inherit;
   color: rgb(255 255 255 / 0.7);
-  font-family: "Fira Sans Condensed";
-  line-height: 100%;
+  
 }
 
 .search-form__fieldset {
   border: none;
+  
 }
 
 .search-form__label {
@@ -263,7 +268,7 @@ ol {
 .button {
   border: 1px solid #fff;
   background-color: transparent;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
 }
@@ -276,8 +281,9 @@ ol {
 
 .more-button {
   color: #fff;
-  padding: 6px 142px;
+  padding: 6px 140px;
   width: 100%;
+  height: 34px;
 }
 
 .button:hover {
